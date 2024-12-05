@@ -284,7 +284,6 @@ n- representa un número entero.
 #info article{
     display: flex;
     align-items: center;
-    margin: 2em;
 }
 
 #info h2+article{
