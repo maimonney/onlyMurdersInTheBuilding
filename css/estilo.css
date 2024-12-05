@@ -1,0 +1,1107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333333;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    height: 100vh;
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+h1,h2,h3,h4{
+    font-family: 'Lora', serif;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
+#sinopsis h2,
+#actores h2,
+#info h2{
+    font-size: 2rem;
+    margin: 1em;
+    text-align: center;
+}
+
+img{
+    object-fit: cover;
+}
+
+/*Menú*/
+.navegacion{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
+    padding:  1em 3em 0 3em;
+    max-width: 1660px;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: rgba(51, 51, 51, .7);
+    box-shadow: 0 0 10px 10px rgba(51, 51, 51, .7);
+    z-index: 99999;
+}
+
+ul{
+    list-style: none;
+}
+
+.lista_menu{
+    margin-right: -4em;
+    transition: all .8s ease;
+}
+
+.lista_menu li{
+    display: inline-block;
+}
+
+.lista_menu li:hover{
+    transform: scale(1.1);
+    font-weight: 800;
+}
+
+.lista_menu li>a{
+    position: relative;
+    text-decoration: none;
+    color: #c5c5c5;
+    margin: .5em;
+    transition: color .5s;
+    font-size: 1.3rem;
+}
+
+.lista_menu li>a:hover{
+    color: #BF7E06;
+}
+
+.lista_menu a:hover:after{
+    width: 100%;
+}
+
+.boton-cerrar{
+    margin: 5px;
+}
+
+.boton-abrir,
+.boton-cerrar {
+    display: inline-block;
+}
+
+/* inicio */
+#inicio{
+    background-image: url(../img/banners/banner_promocional_temporada_3.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+}
+
+.contenido_banner h1{
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+}
+
+.contenido_banner{
+    width: 45%;
+    padding-top: 15em;
+    padding-left: 3em;
+}
+
+/*Botones de link hulu y star+*/
+.contenedor_link_serie{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2em 0;
+}
+
+.contenedor_link_serie a{
+    transition: transform 1s;
+}
+
+.contenedor_link_serie a:hover{
+    transform: scale(1.1);
+}
+
+.boton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    width: 13em;
+    padding: .5em;
+    font-size: .8rem;
+    border-radius: 20px;
+}
+
+.hulu{
+    background: radial-gradient(ellipse, #339b68 0%, rgb(2, 36, 20) 90%);
+    box-shadow: 0 0 20px 1px rgba(30, 233, 132, 0.3);
+}
+
+.star_plus{
+    background: radial-gradient(ellipse, #4f497e 0%, #271f45 70%);
+    box-shadow: 0 0 20px 1px rgba(101, 95, 147, 0.5);
+}
+
+/*Sinopsis*/
+#sinopsis{
+    margin-top: 4em;
+}
+
+#sinopsis>article{
+    height: 738px;
+    margin: 0 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* fondos de los article */
+.tem_1{
+    background-image: url(../img/decoracion/fondos_1.png);
+}
+
+.tem_2{
+    background-image: url(../img/decoracion/fondos_2.png);
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.tem_3{
+    background-image: url(../img/decoracion/fondos_3.png);
+}
+/* ------- */
+
+#sinopsis>article>div{
+    width: 50%;
+    padding: 1em;
+}
+
+#sinopsis>article>div>p{
+    margin: .5em 0 .5em 0;
+}
+
+#sinopsis>article>div~iframe{
+    /* width: "560" height: "315" */
+    margin: 1em;
+    width: 560px;
+    height: 315px;
+}
+
+/*ACTORES*/
+.principales{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3em;
+}
+
+#actores ul>li{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#actores img{
+    margin-bottom: 1em;
+    transition: transform .3s;
+}
+#actores img:hover{
+    transform: scale(1.1);
+}
+
+/*Borde para las imagenes*/
+#actores li:nth-child(3n+1) img{
+    border: 3px solid #345948;
+}
+
+#actores li:nth-child(3n+2) img{
+    border: 3px solid #8C0404;
+}
+
+#actores li:nth-child(3n+3) img{
+    border: 3px solid #9D8719;
+}
+/*
+n- representa un número entero.
+3n- (múltiplo de 3)Esto seleccionará cada tercer elemento en la secuencia.
+3n+3- (múltiplo de 3+3).Esto seleccionará cada tercer elemento en la secuencia.
+*/
+/*---*/
+
+#actores h2+h3{
+    background-color: #8C0404;
+    width: 30%;
+    padding: .5em;
+    text-align: end;
+}
+
+#actores ul+h3{
+    background-color: #9D8719;
+    width: 40%;
+    padding: .5em;
+    text-align: end;
+}
+
+.actSecundarios{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3em;
+}
+
+.actSecundarios img{
+    width: 250px;
+    margin: 1em;
+}
+
+/* información */
+#info{
+    background: linear-gradient(326deg, rgba(5,21,30,1) 32%, rgba(19,71,94,1) 50%, rgba(5,21,30,1) 72%);
+}
+
+#info>img{
+    width: 100%;
+}
+
+#info h2{
+    margin-top: -2em;
+    font-size: 3rem;
+}
+
+#info article{
+    display: flex;
+    align-items: center;
+    margin: 2em;
+}
+
+#info h2+article{
+    margin: 5em;
+}
+
+#info article p{
+    padding: 1.4em;
+}
+
+.info_contenedor_1 div{
+    z-index: 99;
+}
+
+.ventana{
+    max-width: 40%;
+}
+
+.info_contenedor_1 img{
+width: 60%;
+}
+
+.marco{
+    border: 2px solid #8C0404;
+}
+
+/*VENTANAS-PERSONAJES*/
+.mabel h3,
+ .charles h3,
+ .oliver h3,
+ .bunny h3{
+    padding: .5em;
+    width: 100%;
+ }
+
+ .mabel li,
+ .oliver li,
+ .charles li{
+    padding: .5em;
+ }
+
+ /*mabel/oliver*/
+.mabel,
+.oliver{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 10em;
+ }
+
+ .mabel h3{
+    background-color: #8C0404;
+}
+
+ .oliver h3{
+    background-color: #bf7e06;
+ }
+
+.mabel img,
+.oliver img{
+    margin-left: 7em;
+}
+
+ /*Charles*/
+ .charles{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10em;
+ }
+
+ .charles h3{
+    background-color: #9D8719;
+    text-align: end;
+ }
+
+ .charles div+img{
+    margin-right: 6em;
+ }
+
+ .charles li{
+    margin-left: 20em;
+ }
+
+ .contenedor_charles div{
+    margin: 2em 0 5em 0;
+ }
+
+ .musica h3{
+    background-color: #345948;
+ }
+
+ .musica iframe{
+    margin-top: 5em;
+    margin-left: 6em;
+ }
+
+ /*Bunny*/
+ .fondo_img_1{
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 40%;
+    z-index: 9;
+}
+
+.fondo_img_1_2{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.bunny{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10em;
+    position: relative;
+}
+
+.img_bunny{
+    z-index: 999;
+}
+
+.bunny h3{
+    background-color: #345948;
+}
+
+.bunny div{
+    width: 50%;
+    margin-top: 2em;
+    z-index: 99;
+}
+
+/* formulario */
+#formulario{
+    background-color: #05151e;
+    padding-top: 12em;
+    position: relative;
+}
+
+#formulario{
+    margin-top: -3em;
+}
+
+.fondo_img_2{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.fondo_img_3{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+}
+
+.contenedor_form {
+    position: relative;
+    margin: 0 auto 10em auto;
+    padding: 6em;
+    background: linear-gradient(317deg, rgba(157, 135, 25, 0.2), #9D8719da, rgba(157, 135, 25, 0.257));
+    border: 3px solid;
+    border-image: linear-gradient(125deg, rgba(157, 135, 25, 0.2), #9D8719da, rgba(157, 135, 25, 0.257));
+    z-index: 999;
+  }
+
+.cinta_1{
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+.cinta_2{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#formulario, #formulario>form{
+    display: flex;
+}
+
+#formulario h2{
+    font-size: 2rem;
+}
+
+#formulario>div{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+.contenedor_form>div{
+    width: 80%;
+}
+
+.fila{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.columna{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 50%;
+}
+
+label,
+input,
+textarea{
+    margin: .5em;
+}
+
+input,
+textarea{
+    background-color: #BF7E06;
+    border: 1px solid #6e4a07;
+    outline:0;
+    color: #333333;
+    padding: .5em;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"]{
+    height: 3em;
+}
+
+/*Cambiar el estilo del scroll de textarea*/
+textarea{
+    resize: none;
+    min-height: 3em;
+}
+
+textarea::-webkit-scrollbar {
+    min-width: 1em;
+}
+
+textarea::-webkit-scrollbar-track {
+    background-color: #BF7E06;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: #6e4a07;
+}
+/*---*/
+
+input:focus,
+textarea:focus{
+    border: 2px solid #6e4a07;
+}
+
+input[type="submit"]{
+    background-color: #345948;
+    border: none;
+    box-shadow: 0 3px 12px 0#333333;
+    border-radius: 10px;
+    color: white;
+    text-transform: uppercase;
+    margin: 2em auto;
+    width: 10em;
+    padding: 1em;
+    cursor: pointer;
+    transition: all 1.5s;
+}
+
+input[type="submit"]:hover{
+    background-color: #9D8719;
+    transform: scale(1.1);
+}
+
+/* footer */
+footer{
+    background-image: url(../img/decoracion/fondo_e_edificios.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #05151e;
+    position: relative;
+    padding: 2em;
+    height: 900px;
+    text-align: center;
+}
+
+footer>div{
+    padding: 2em;
+}
+.contenedor_footer{
+    margin: 2em;
+}
+
+.contenedor_footer,
+.alumna{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer li{
+    display: inline-block;
+}
+
+footer>div{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.alumna ul{
+    margin: 2em;
+}
+
+.alumna li{
+    display: block;
+    margin: .5em;
+}
+
+.alumna li:nth-child(odd){
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+
+.alumna img{
+    border: 4px solid #BF7E06;
+}
+
+.contactoAlumna li img{
+    margin: 1em;
+}
+
+.contactoAlumna a{
+    text-decoration: none;
+    color: white;
+}
+
+.contactoAlumna li{
+    margin: 0;
+}
+
+.contactoAlumna{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactoAlumna li{
+    transition: transform 1.5s;
+}
+
+.contactoAlumna li:hover{
+transform: scale(1.2);
+}
+
+/*RESPONSIVE-PANTALLAS-GRANDES*/
+@media screen and (min-width: 1400px) {
+    body{
+        font-size: 1.2rem;
+    }
+
+    .lista_menu li>a{
+        font-size: 2rem;
+    }
+
+    #sinopsis h2,
+    #actores h2,
+    #info h2{
+        font-size: 4rem;
+    }
+
+    /*Banner*/
+    .contenido_banner h1{
+        font-size: 4rem;
+    }
+
+    .boton {
+        padding: 1em;
+        font-size: 1.2rem;
+    }
+
+    /*SINOPSIS*/
+    /* fondos de los article */
+    .tem_1{
+        background-image: url(../img/decoracion/fondos_7.png);
+    }
+
+    .tem_2{
+        background-image: url(../img/decoracion/fondos_8.png);
+    }
+
+    .tem_3{
+        background-image: url(../img/decoracion/fondos_9.png);
+    }
+    /* ------- */
+
+    #sinopsis{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #sinopsis>article{
+        width: 80%;
+        margin: 0;
+        height: 900px;
+    }
+
+    #sinopsis>article>div~iframe{
+        margin: 1em;
+        width: 500px;
+        height: 270px;
+    }
+
+    /*Personajes*/
+    .principales img{
+        width: 400px;
+    }
+
+    .actSecundarios img{
+        width: 350px;
+    }
+
+    /*Infomacion*/
+    #info>article .marco{
+        width: 100em;
+    }
+
+    .info_contenedor_1 img{
+        width: 20%;
+    }
+
+    #info>div div~img{
+        object-fit: contain;
+        width: 600px;
+    }
+
+    .img_bunny{
+        width: 600px;
+    }
+
+    /*form*/
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"]{
+        height: 5em;
+    }
+
+    textarea{
+        height: 10em;
+    }
+    
+    input[type="submit"]{
+        width: 20em;
+        padding: 1.4em;
+        font-size: 1.2rem;
+    }
+
+}
+
+/*RESPONSIVE-TABLET-MOVILE*/
+@media screen and (max-width: 900px) {
+    /*INICIO*/
+    .contenido_banner{
+        width: 80%;
+    }
+
+    /*SINOPSIS*/
+    .tem_1,
+    .tem_2,
+    .tem_3{
+        flex-direction: column;
+    }
+
+    #sinopsis>article>div{
+        width: 90%;
+        padding: 0;
+    }
+
+    #sinopsis>article {
+        height: 100%;
+        margin: 2em;
+    }
+
+    /*Info*/
+    #info>div img{
+        margin: 1em;
+    }
+
+    #info>article{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .charles{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .charles h3{
+        text-align: center;
+     }
+
+     .charles div{
+        margin: 0;
+        text-align: center;
+     }
+
+     .charles li{
+         margin: 1em;
+      }
+
+      .musica iframe{
+        margin: 2em;
+     }
+
+     .bunny div{
+        width: 80%;
+    }
+
+      /*Sinopsis*/
+      #sinopsis article{
+        background-size: cover;
+        margin: 7em auto;
+      }
+
+      .tem_1{
+        background-image: url(../img/decoracion/fondos_4.png);
+      }
+      
+      .tem_2{
+        background-image: url(../img/decoracion/fondos_5.png);
+      }
+      
+      .tem_3{
+        background-image: url(../img/decoracion/fondos_6.png);
+      } 
+
+      /*actores*/
+      #actores ul+h3 {
+        width: 70%;
+    }
+
+    .principales img{
+        width: 200px;
+        margin: 1em;
+    }
+}
+
+@media screen and (min-width: 890px){
+    .boton-abrir,
+    .boton-cerrar{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 890px){
+    /*MENU*/
+    .lista_menu {
+        position: absolute;
+        overflow:hidden;
+        max-height:0;
+        margin-left: -4em;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .lista_menu li{
+        display: block;
+        padding: 1em;
+    }
+
+    .lista_menu a{
+        color: rgb(219, 219, 219);
+        font-size: 2.3rem;
+    }
+
+    .boton-cerrar{
+        display: none;
+    }
+
+    .navegacion:target .lista_menu {
+        background-color: #333333;
+        padding-top: 27em;
+        padding-bottom: 17.6em;
+        box-shadow: 4px 4px 60px rgba(0,0,0,1);
+        text-align: center;
+        transition: all 1.5s;
+    }
+
+    .navegacion:target .boton-cerrar {
+        display: inline-block;
+    }
+
+    .navegacion:target .boton-abrir {
+        display: none;
+    }
+
+    /*CAMBIAR COLOR CADA li*/
+    .lista_menu li:nth-child(1) {
+        background-color: #BF7E06;
+    }
+
+    .lista_menu li:nth-child(2) {
+        background-color: #9D8719;
+    }
+
+    .lista_menu li:nth-child(3) {
+        background-color: #345948;
+    }
+
+    .lista_menu li:nth-child(4) {
+        background-color: #594B04;
+    }
+
+    .lista_menu li:nth-child(5) {
+        background-color: #8C0404;
+    }
+
+    #inicio{
+        background-image: url(../img/banners/banner_temporada_3_tab.jpg);
+        background-position: center;
+    }
+
+    /*Actores*/
+    .actSecundarios{
+        margin: 2em 1em;
+    }
+
+    .actSecundarios img{
+        width: 200px;
+        margin: .5em;
+    }
+
+    /*INFO*/
+    #info h2{
+        font-size: 2rem;
+    }
+
+    #info>div img,
+    .bunny>img{
+        max-width: 70%;
+    }
+
+    .mabel,
+    .oliver{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .mabel div,
+    .charles div,
+    .oliver div{
+        margin-top: 1em;
+    }
+
+    .mabel h3,
+    .oliver h3{
+        text-align: center;
+     }
+
+     .mabel div,
+     .oliver div{
+        margin: 1em 0 0 0;
+        text-align: center;
+     }
+
+    .mabel li,
+    .oliver li{
+       margin: 1em;
+    }
+
+    .fondo_img_1_2{
+        display: none;
+    }
+
+    .bunny_img{
+        z-index: 999;
+    }
+
+    /*FORM*/
+    #formulario h2{
+        font-size: 1.4rem;
+    }
+    
+    .cinta_1,
+    .cinta_2{
+        width: 60%;
+    }
+
+    .fila{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .columna{
+        width: 70%;
+    }
+
+    .contenedor_form {
+        padding: 5em 1em 3em 1em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+     /*FOOTER*/
+     .contenedor_footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor_footer div{
+        margin: 1em;
+    }
+
+    .alumna img{
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+        #inicio h1{
+        font-size: 2rem;
+    }
+
+    /*Info*/
+    #info h2+article {
+        margin: 1em;
+        padding-top: 1em;
+    }
+
+    .marco{
+        width: 80%;
+    }
+
+    #info article{
+        display: flex;
+        align-items: center;
+        margin: 1em;
+    }
+
+    .mabel{
+        margin-bottom: -7em;
+    }
+
+    /*Personajes*/
+    .principales{
+        margin: 1em;
+    }
+
+    .principales img{
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /*INICIO*/    
+    #inicio{
+        height: 52em;
+    }
+    .contenido_banner{
+        padding-top: 26em;
+        width: 90%;
+    }
+
+    .boton{
+        width: 8em;
+        height: 4em;
+        padding: .5em;
+    }
+
+    .boton img{
+        width: 4em;
+    }
+
+    /*videos*/
+    #sinopsis>article>div~iframe{
+        margin: 1em;
+        width: 250px;
+        height: 170px;
+    }
+
+    /*Actores*/
+    #actores h2+h3{
+        width: 50%;
+    }
+
+    /*Info*/
+    #info article p {
+        padding: 0.4em;
+    }
+
+    /*form*/
+    input[type="submit"]{
+        width: 7em;
+    }
+
+    /*FOOTER*/
+    .alumna{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #inicio{
+        width: 320px;
+    }
+    /*INFO*/
+    #info h2{
+        font-size: 1.5rem;
+    }
+}
