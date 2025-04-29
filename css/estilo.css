@@ -704,11 +704,11 @@ transform: scale(1.2);
 
     /*Personajes*/
     .principales img{
-        width: 400px;
+        width: 300px;
     }
 
     .actSecundarios img{
-        width: 350px;
+        width: 250px;
     }
 
     /*Infomacion*/
@@ -919,7 +919,7 @@ transform: scale(1.2);
     }
 
     .actSecundarios img{
-        width: 200px;
+        width: 150px;
         margin: .5em;
     }
 
@@ -1042,7 +1042,7 @@ transform: scale(1.2);
     }
 
     .principales img{
-        width: 250px;
+        width: 150px;
     }
 }
 
